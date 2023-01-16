@@ -7,14 +7,15 @@ APP_NAME=cicd-test
 JAR_NAME=$(ls $REPOSITORY/build/libs/ | grep 'SNAPSHOT.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
 
-CURRENT_PID=$(pgrep -f $APP_NAME)
+CURRENT_PID=$( ps -ef | grep "$JAR_NAME" | grep -v 'grep' |  awk '{print $2}')
+# CURRENT_PID=$(pgrep -f $APP_NAME)
 
 if [ -z $CURRENT_PID ]
 then
   echo "> 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
 else
   echo "> kill -9 $CURRENT_PID"
-  kill -9 $CURRENT_PID
+  kill -15 $CURRENT_PID
   sleep 5
 fi
 
