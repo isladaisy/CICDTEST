@@ -14,15 +14,15 @@ public class BoardResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
     private String title;
-    private String contents;
-    private String author;
+//    private String contents;
+//    private String author;
 
     public BoardResponseDto(Board board) {
         this.createdAt = board.getCreatedAt();
         this.modifiedAt = board.getModifiedAt();
         this.title = board.getTitle();
-        this.contents = board.getContents();
-        this.author = board.getAuthor();
+//        this.contents = board.getContents();
+//        this.author = board.getAuthor();
     }
 
 }
