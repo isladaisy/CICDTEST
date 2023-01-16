@@ -48,11 +48,11 @@ jobs:
 
       # build
       - name: Build with Gradle
-#        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-#        with: #이 세줄은 test 제외한 gradle build
-#          arguments: build
-        run: ./gradlew clean build -x test
-        shell: bash
+        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        with: #이 세줄은 test 제외한 gradle build
+          arguments: build
+#        run: ./gradlew clean build -x test
+#        shell: bash
 
       # properties 신경 쓰기
       - name: make application.properties
