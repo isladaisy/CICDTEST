@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-REPOSITORY=home/ubuntu/app
+REPOSITORY=/home/ubuntu/app
 cd $REPOSITORY
 
 APP_NAME=cicd-test
@@ -14,12 +14,12 @@ then
   echo "> 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
 else
   echo "> kill -9 $CURRENT_PID"
-  kill -15 $CURRENT_PID
+  kill -9 $CURRENT_PID
   sleep 5
 fi
 
 echo "> $JAR_PATH 배포"
-nohup jave -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
+nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
 
 #BUILD_JAR=$(ls /home/ubuntu/app/build/libs/*.jar)
 #JAR_NAME=$(basename $BUILD_JAR)
