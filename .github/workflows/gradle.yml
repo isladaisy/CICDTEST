@@ -74,8 +74,8 @@ jobs:
 
       # 압축파일 형태로 전달
       - name: Make zip file
-#        run: zip -qq -r ./$GITHUB_SHA.zip .
-        run: zip -r ./$GITHUB_SHA.zip .
+        run: zip -qq -r ./$GITHUB_SHA.zip .
+#        run: zip -r ./$GITHUB_SHA.zip .
         shell: bash
 
       # aws 인증
