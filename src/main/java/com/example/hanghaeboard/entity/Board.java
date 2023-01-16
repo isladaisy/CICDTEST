@@ -17,11 +17,11 @@ public class Board extends Timestamped {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
-    private String contents;
-
-    @Column(nullable = false)
-    private String author;
+//    @Column(nullable = false)
+//    private String contents;
+//
+//    @Column(nullable = false)
+//    private String author;
 
     @Column(nullable = false)
     private String password;
@@ -29,15 +29,15 @@ public class Board extends Timestamped {
 
     public Board(BoardRequestDto requestDto) {
         this.title = requestDto.getTitle();
-        this.contents = requestDto.getContents();
-        this.author = requestDto.getAuthor();
+//        this.contents = requestDto.getContents();
+//        this.author = requestDto.getAuthor();
         this.password = requestDto.getPassword();
     }
 
     public void update(BoardRequestDto requestDto) {
         this.title = requestDto.getTitle();
-        this.contents = requestDto.getContents();
-        this.author= requestDto.getAuthor();
+//        this.contents = requestDto.getContents();
+//        this.author= requestDto.getAuthor();
         this.password = requestDto.getPassword();
     }
 }
