@@ -21,10 +21,10 @@
 #echo "> $JAR_PATH 배포"
 #nohup jave -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
 
-BUILD_JAR=$(ls /home/ubuntu/app/build/libs/hanghaeboard-0.0.1-SNAPSHOT.jar)
+BUILD_JAR=$(ls /home/ubuntu/app/build/libs/*.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
-echo "> 현재 시간: $(date)" >> /home/ubuntu/app/deploy.log
+#echo "> 현재 시간: $(date)" >> /home/ubuntu/app/deploy.log
 
 echo "> build 파일명: $JAR_NAME" >> /home/ubuntu/app/deploy.log
 
