@@ -13,7 +13,7 @@ public class BoardResponseDto {
 
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
-    private String title;
+    private Long title;
     private String contents;
     private String author;
 
