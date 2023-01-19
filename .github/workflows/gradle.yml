@@ -49,7 +49,7 @@ jobs:
       # build
       - name: Build with Gradle
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-        with: #이 세줄은 test 제외한 gradle build
+        with: #이 세줄은 test 제외한 gradle build /// 둘 다 상관없
           arguments: build
 #        run: ./gradlew clean build -x test
 #        shell: bash
@@ -75,7 +75,7 @@ jobs:
       # 압축파일 형태로 전달
       - name: Make zip file
         run: zip -qq -r ./$GITHUB_SHA.zip .
-#        run: zip -r ./$GITHUB_SHA.zip .
+#        run: zip -r ./$GITHUB_SHA.zip . ////// 여기도 상관없
         shell: bash
 
       # aws 인증
